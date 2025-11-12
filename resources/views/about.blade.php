@@ -6,7 +6,6 @@
 <div class="container text-center my-5">
     <h2 class="fw-bold">About EduFun</h2>
 
-
     <div class="col-md-8 mx-auto">
         <p class="fs-3 mb-5">
             EduFun adalah perusahaan pendidikan berbasis teknologi asal Indonesia. EduFun menyediakan layanan akses pendidikan dalam format tulisan berbahasa Indonesia yang disajikan secara online melalui website.

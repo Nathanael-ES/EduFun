@@ -24,15 +24,37 @@ class ArticleSeeder extends Seeder
             $writers = Writer::all();
         }
 
-        foreach (range(1, 8) as $i)
-        {
+        $interactiveArticles = [
+            'Human and Computer Interaction',
+            'User Experience',
+            'User Experience for Digital Immersive Technology'
+        ];
+
+         $softwareArticles = [
+            'Pattern Software Design',
+            'Agile Software Development',
+            'Code Reengineering'
+        ];
+
+        foreach (range(1, 50) as $i) {
             Article::create([
-                'title'=> $faker->sentence,
-                'content'=> $faker->paragraphs(5, true),
-                'category'=> $faker->randomElement(['Interactive Multimedia', 'Software Engineering']),
+                'title' => $faker->randomElement($interactiveArticles),
+                'content' => $faker->paragraphs(5, true),
+                'category' => 'Interactive Multimedia',
                 'writer_id' => $writers->random()->id,
                 'published_at' => $faker->date(),
-                'views' => $faker->numberBetween(0, 500),
+                'views' => $faker->numberBetween(100, 500),
+            ]);
+        }
+
+        foreach (range(1, 50)as $i) {
+            Article::create([
+                'title' => $faker->randomElement($softwareArticles),
+                'content' => $faker->paragraphs(5, true),
+                'category' => 'Software Engineering',
+                'writer_id' => $writers->random()->id,
+                'published_at' => $faker->date(),
+                'views' => $faker->numberBetween(100, 500),
             ]);
         }
     }

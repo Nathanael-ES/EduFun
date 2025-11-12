@@ -3,6 +3,8 @@
 @section('title', $writer->name)
 
 @section('content')
+
+<div class="container my-2">
 <h2>{{ $writer->name }}</h2>
 <p>{{ $writer->bio }}</p>
 
@@ -16,4 +18,7 @@
     </div>
   </div>
 @endforeach
+</div>
+
 @endsection
+

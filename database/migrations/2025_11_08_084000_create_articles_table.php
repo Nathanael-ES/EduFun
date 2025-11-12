@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('content');
             $table->string('category');
             $table->foreignId('writer_id')->constrained('writers')->onDelete('cascade');
-            // $table->date('published_at')->nullable();
+            $table->date('published_at')->nullable();
             $table->unsignedBigInteger('views')->default(0);
             $table->timestamps();
         });

@@ -3,6 +3,8 @@
 @section('title', 'Category')
 
 @section('content')
+
+<div class="container my-2">
 <h2>Categories</h2>
 <div class="row">
   @foreach($categories as $label => $slug)
@@ -17,4 +19,6 @@
     </div>
   @endforeach
 </div>
+</div>
+
 @endsection

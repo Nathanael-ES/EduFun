@@ -28,23 +28,5 @@ class CategoryController extends Controller
         $articles = Article::where('category', $categoryName)->orderBy('published_at', 'desc')->get();
 
         return view('category.show', compact('categoryName', 'articles'));
-
-        // if($name == 'Interactive Multimedia')
-        // {
-        //     $courses = [
-        //         'Human and Computer Interaction',
-        //         'User Experience',
-        //         'User Experience for Digital Immersive Technology'
-        //     ];
-        // }
-        // else if($name == 'Software Engineering')
-        // {
-        //     $courses = [
-        //         'Pattern Software Design',
-        //         'Agile Software Development',
-        //         'Code Reengineering'
-        //     ];
-        // }
-        // return view('detail', ['category' => $name, 'courses' => $courses]);
     }
 }

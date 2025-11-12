@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>EduFun - @yield('title', 'Home')</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    @include('layouts.bootstrap')
 </head>
-<body>
+<body style="background-color: rgb(223, 226, 201); padding-bottom: 80px">
 @include('layouts.header')
 
-<div class="container my-4">
-  @yield('content')
-</div>
+@yield('content')
 
 @include('layouts.footer')
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+

@@ -13,6 +13,6 @@ Route::get('/category', [CategoryController::class, 'index'])->name('category.in
 Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('category.show');
 
 Route::get('/writers', [WriterController::class, 'index'])->name('writers.index');
-Route::get('/writers/{id}', [WriterController::class, 'show'])->name('writer.show');
+Route::get('/writers/{id}', [WriterController::class, 'show'])->name('writers.show');
 
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
