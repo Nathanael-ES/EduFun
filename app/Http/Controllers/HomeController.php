@@ -17,10 +17,4 @@ class HomeController extends Controller
         // kirim ke view home.blade.php
         return view('home', compact('articles'));
     }
-
-    public function popular()
-    {
-        $articles = Article::orderBy('views', 'desc')->paginate(3);
-        return view('popular.index', compact('articles'));
-    }
 }

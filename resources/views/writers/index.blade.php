@@ -12,7 +12,7 @@
       <div class="card mb-3">
         <div class="card-body ">
           <h5>{{ $writer->name }}</h5>
-          <p>{{ \Illuminate\Support\Str::limit($writer->bio, 60) }}</p>
+          <p>{{ Str::limit($writer->bio, 60) }}</p>
           <div class="d-flex justify-content-end"><a href="{{ route('writers.show', $writer->id) }}" class="btn btn-sm btn-primary">View articles</a></div>
         </div>
       </div>
